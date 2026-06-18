@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==========================================================================
+   TOKENS DE COLOR (derivados de lib/brand.ts).
+   Cambiar acá actualiza toda la paleta vía Tailwind (tailwind.config.ts).
+   ========================================================================== */
+:root {
+  /* Canales RGB (space-separated) para permitir modificadores de opacidad
+     de Tailwind, p.ej. bg-ink/15. Equivalen a los HEX de lib/brand.ts. */
+  --color-primary: 109 40 217; /* #6D28D9 */
+  --color-primary-bright: 139 92 246; /* #8B5CF6 */
+  --color-volt: 198 242 78; /* #C6F24E */
+  --color-ink: 20 16 31; /* #14101F */
+  --color-paper: 250 249 252; /* #FAF9FC */
+  --color-muted: 107 100 120; /* #6B6478 */
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem; /* compensa navbar sticky para anclas */
+  }
+
+  body {
+    background-color: rgb(var(--color-paper));
+    color: rgb(var(--color-ink));
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Foco visible por teclado (accesibilidad AA). */
+  :focus-visible {
+    outline: 3px solid rgb(var(--color-primary));
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  ::selection {
+    background-color: rgb(var(--color-volt));
+    color: rgb(var(--color-ink));
+  }
+}
+
+@layer components {
+  /* Eyebrow técnico (mono) — sello "ficha de vehículo". */
+  .eyebrow {
+    @apply font-mono text-xs uppercase tracking-[0.18em] text-primary;
+  }
+
+  /* Contenedor estándar de página. */
+  .container-zuna {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8;
+  }
+
+  /* Botón primario (lima — el acento que "carga" la página). */
+  .btn-volt {
+    @apply inline-flex items-center justify-center gap-2 rounded-2xl bg-volt px-6 py-3.5
+           font-semibold text-ink shadow-soft transition-all duration-200
+           hover:-translate-y-0.5 hover:shadow-lift focus-visible:outline-offset-4;
+  }
+
+  /* Botón secundario / ghost. */
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-2xl border border-ink/15
+           bg-transparent px-6 py-3.5 font-semibold text-ink transition-all duration-200
+           hover:border-ink/40 hover:-translate-y-0.5;
+  }
+
+  /* Botón sobre fondos oscuros. */
+  .btn-ghost-dark {
+    @apply inline-flex items-center justify-center gap-2 rounded-2xl border border-white/25
+           bg-transparent px-6 py-3.5 font-semibold text-paper transition-all duration-200
+           hover:border-white/60 hover:-translate-y-0.5;
+  }
+
+  /* Gradiente de marca violeta → violeta brillante. */
+  .bg-brand-gradient {
+    background-image: linear-gradient(
+      135deg,
+      rgb(var(--color-primary)) 0%,
+      rgb(var(--color-primary-bright)) 100%
+    );
+  }
+
+  .text-brand-gradient {
+    background-image: linear-gradient(
+      135deg,
+      rgb(var(--color-primary)) 0%,
+      rgb(var(--color-primary-bright)) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Card modular base. */
+  .card {
+    @apply rounded-2xl border border-ink/10 bg-white p-6 shadow-soft transition-all duration-300;
+  }
+}
+
+/* ==========================================================================
+   MOTION — respeto a prefers-reduced-motion.
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
