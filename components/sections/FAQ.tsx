@@ -12,7 +12,7 @@ export default function FAQ() {
 
   return (
     <section id="faq" className="py-20 sm:py-28">
-      <div className="container-zuna max-w-3xl">
+      <div className="container-evotuc max-w-3xl">
         <Reveal>
           <p className="eyebrow text-center">PREGUNTAS FRECUENTES</p>
           <h2 className="mt-3 text-center font-display text-3xl font-extrabold tracking-tight sm:text-4xl">

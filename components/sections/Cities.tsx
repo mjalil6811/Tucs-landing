@@ -9,7 +9,7 @@ import { trackEvent } from "@/lib/analytics";
 export default function Cities() {
   return (
     <section id="para-ciudades" className="bg-ink py-20 text-paper sm:py-28">
-      <div className="container-zuna">
+      <div className="container-evotuc">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
           <Reveal>
             <p className="eyebrow text-volt">PARA CIUDADES Y OPERADORES</p>

@@ -66,7 +66,7 @@ export default function Savings() {
 
   return (
     <section id="ahorro" className="py-20 sm:py-28">
-      <div className="container-zuna">
+      <div className="container-evotuc">
         <Reveal>
           <p className="eyebrow">HACÉ NÚMEROS</p>
           <h2 className="mt-3 max-w-2xl font-display text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl">

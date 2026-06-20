@@ -10,7 +10,7 @@ const items = [
 export default function AllianceBar() {
   return (
     <section aria-label="Alianza estratégica" className="bg-ink py-5">
-      <div className="container-zuna flex flex-col items-center justify-between gap-4 text-paper sm:flex-row">
+      <div className="container-evotuc flex flex-col items-center justify-between gap-4 text-paper sm:flex-row">
         <p className="font-mono text-xs uppercase tracking-[0.16em] text-paper/80">
           En alianza estratégica con{" "}
           <span className="font-bold text-volt">{brand.partner.name}</span>

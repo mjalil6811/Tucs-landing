@@ -29,10 +29,10 @@ export default function Navbar() {
       }`}
     >
       <nav
-        className="container-zuna flex h-16 items-center justify-between"
+        className="container-evotuc flex h-16 items-center justify-between"
         aria-label="Navegación principal"
       >
-        <a href="#inicio" aria-label={`Inicio · ZUNA`}>
+        <a href="#inicio" aria-label={`Inicio · EVOTUC`}>
           <Logo />
         </a>
 
@@ -95,7 +95,7 @@ export default function Navbar() {
           open ? "max-h-96" : "max-h-0"
         }`}
       >
-        <ul className="container-zuna flex flex-col gap-1 py-3">
+        <ul className="container-evotuc flex flex-col gap-1 py-3">
           {navLinks.map((link) => (
             <li key={link.href}>
               <a

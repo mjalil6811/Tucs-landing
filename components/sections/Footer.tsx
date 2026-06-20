@@ -19,7 +19,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-ink pt-16 text-paper">
-      <div className="container-zuna">
+      <div className="container-evotuc">
         <div className="grid gap-10 border-b border-paper/10 pb-12 md:grid-cols-[1.5fr_1fr_1fr]">
           {/* Marca */}
           <div>

@@ -7,7 +7,7 @@ import Reveal from "@/components/ui/Reveal";
 export default function SocialProof() {
   return (
     <section className="py-20 sm:py-28">
-      <div className="container-zuna">
+      <div className="container-evotuc">
         {/* Franja de stats */}
         <Reveal as="div">
           <div className="grid grid-cols-2 gap-4 rounded-3xl bg-brand-gradient p-8 text-paper sm:grid-cols-4">

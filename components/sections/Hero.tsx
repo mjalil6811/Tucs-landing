@@ -20,7 +20,7 @@ export default function Hero() {
         className="pointer-events-none absolute -top-40 right-0 h-[520px] w-[520px] rounded-full bg-primary-bright/20 blur-3xl"
       />
 
-      <div className="container-zuna grid items-center gap-12 lg:grid-cols-2">
+      <div className="container-evotuc grid items-center gap-12 lg:grid-cols-2">
         {/* Columna texto */}
         <div>
           <p className="eyebrow">IMPORTADOR OFICIAL // ALIADO DE GOU</p>

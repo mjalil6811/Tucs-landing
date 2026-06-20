@@ -1,9 +1,9 @@
 /**
  * ============================================================================
- *  ZUNA · TOKENS DE MARCA (single source of truth)
+ *  EVOTUC · TOKENS DE MARCA (single source of truth)
  * ============================================================================
  *  Cambiá acá el nombre, contacto, colores, redes e IDs de tracking y se
- *  propaga a todo el sitio. NOMBRE DE TRABAJO: ZUNA (placeholder swappeable).
+ *  propaga a todo el sitio. NOMBRE DE TRABAJO: EVOTUC (placeholder swappeable).
  *
  *  - Para cambiar el nombre de la marca: editá `brand.name`.
  *  - Para cambiar la paleta: editá `colors` (también reflejados en
@@ -14,9 +14,9 @@
 
 export const brand = {
   /** NOMBRE DE TRABAJO — reemplazable en segundos desde acá. */
-  name: "ZUNA",
+  name: "EVOTUC",
   /** Razón social / nombre legal (footer, avisos). */
-  legalName: "ZUNA Movilidad Eléctrica S.A.",
+  legalName: "EVOTUC Movilidad Eléctrica S.A.",
   /** Tagline corto de marca. */
   tagline: "Movilidad eléctrica que mueve tu negocio.",
   /** Descripción para SEO / Open Graph. */
@@ -24,10 +24,10 @@ export const brand = {
     "Importadora y comercializadora oficial de movilidad eléctrica en Argentina. Triciclos 100% eléctricos para pasajeros, delivery y carga. Aliada estratégica de GOU.",
 
   /** Dominio canónico para SEO (sin slash final). */
-  url: "https://zuna.com.ar",
+  url: "https://evotuc.com.ar",
 
   /** Contacto */
-  email: "hola@zuna.com.ar",
+  email: "hola@evotuc.com.ar",
   /** WhatsApp en formato internacional sin "+" ni espacios (para wa.me). */
   whatsapp: "5491100000000",
   /** WhatsApp para mostrar al usuario. */
@@ -43,9 +43,9 @@ export const brand = {
 
   /** Redes sociales (dejá "" para ocultar). */
   social: {
-    instagram: "https://instagram.com/zuna",
-    linkedin: "https://linkedin.com/company/zuna",
-    facebook: "https://facebook.com/zuna",
+    instagram: "https://instagram.com/evotuc",
+    linkedin: "https://linkedin.com/company/evotuc",
+    facebook: "https://facebook.com/evotuc",
   },
 
   /**

@@ -13,7 +13,7 @@ import { trackEvent } from "@/lib/analytics";
 export default function Vehicle() {
   return (
     <section id="el-vehiculo" className="bg-ink py-20 text-paper sm:py-28">
-      <div className="container-zuna">
+      <div className="container-evotuc">
         <Reveal>
           <p className="eyebrow text-volt">EL VEHÍCULO</p>
           <div className="mt-3 flex flex-wrap items-end justify-between gap-4">

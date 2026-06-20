@@ -7,7 +7,7 @@ import { trackEvent } from "@/lib/analytics";
 export default function HowToJoin() {
   return (
     <section id="como-sumarte" className="py-20 sm:py-28">
-      <div className="container-zuna">
+      <div className="container-evotuc">
         <Reveal>
           <p className="eyebrow">CÓMO SUMARTE</p>
           <h2 className="mt-3 font-display text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl">

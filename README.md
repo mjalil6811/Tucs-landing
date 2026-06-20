@@ -1,6 +1,6 @@
-# ZUNA — Landing de movilidad eléctrica
+# EVOTUC — Landing de movilidad eléctrica
 
-Landing page de alta conversión para **ZUNA** (NOMBRE DE TRABAJO, swappeable), importadora y comercializadora oficial de movilidad eléctrica en Argentina, aliada estratégica de **GOU**.
+Landing page de alta conversión para **EVOTUC** (NOMBRE DE TRABAJO, swappeable), importadora y comercializadora oficial de movilidad eléctrica en Argentina, aliada estratégica de **GOU**.
 
 Construida con **Next.js 14 (App Router) + TypeScript + Tailwind CSS + Framer Motion**. Mobile-first, accesible (AA) y lista para deploy en Vercel.
 
@@ -70,7 +70,7 @@ scripts/        gen-pdf.mjs (regenera la ficha técnica placeholder)
 ## Notas de contenido
 
 - Specs reales del modelo **HB1500DZK-21**. **No se muestran precios** ("Cotizá").
-- ZUNA es la **importadora**; GOU es el **aliado operativo**. Las métricas de ciudades corresponden a la operación con GOU.
+- EVOTUC es la **importadora**; GOU es el **aliado operativo**. Las métricas de ciudades corresponden a la operación con GOU.
 - Reemplazá la ilustración del triciclo (`components/ui/TukTuk.tsx`) y `public/og.svg` / `ficha-tecnica.pdf` por assets reales (preferentemente `.webp` para fotos).
 
 ## Deploy en Vercel

@@ -2,7 +2,7 @@
 import { writeFileSync } from "node:fs";
 
 const lines = [
-  "ZUNA - Ficha tecnica",
+  "EVOTUC - Ficha tecnica",
   "Modelo HB1500DZK-21",
   "",
   "Motorizacion: 100% electrico",
@@ -20,7 +20,7 @@ const lines = [
 ];
 
 let y = 760;
-let content = "BT /F1 16 Tf 60 790 Td (ZUNA) Tj ET\n";
+let content = "BT /F1 16 Tf 60 790 Td (EVOTUC) Tj ET\n";
 for (const line of lines) {
   content += `BT /F1 11 Tf 60 ${y} Td (${line.replace(/[()\\]/g, "\\$&")}) Tj ET\n`;
   y -= 20;

@@ -113,7 +113,7 @@ export const joinPlans: JoinPlan[] = [
   },
 ];
 
-/** Stats de la operación con GOU (placeholders editables, no son ventas de ZUNA). */
+/** Stats de la operación con GOU (placeholders editables, no son ventas de EVOTUC). */
 export const cityStats = [
   { value: 80, suffix: "+", label: "Unidades activas" },
   { value: 1200, suffix: "+", label: "Viajes por día" },

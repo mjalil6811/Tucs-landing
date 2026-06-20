@@ -8,7 +8,7 @@ import { trackEvent } from "@/lib/analytics";
 export default function UseCases() {
   return (
     <section id="casos-de-uso" className="py-20 sm:py-28">
-      <div className="container-zuna">
+      <div className="container-evotuc">
         <Reveal>
           <p className="eyebrow">CASOS DE USO</p>
           <h2 className="mt-3 max-w-2xl font-display text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl">

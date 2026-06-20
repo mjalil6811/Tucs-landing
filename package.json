@@ -1,8 +1,8 @@
 {
-  "name": "zuna-landing",
+  "name": "evotuc-landing",
   "version": "1.0.0",
   "private": true,
-  "description": "Landing page de alta conversión para ZUNA — importadora oficial de movilidad eléctrica en Argentina, aliada de GOU.",
+  "description": "Landing page de alta conversión para EVOTUC — importadora oficial de movilidad eléctrica en Argentina, aliada de GOU.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

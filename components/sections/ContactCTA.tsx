@@ -78,7 +78,7 @@ export default function ContactCTA() {
 
   return (
     <section id="contacto" className="py-20 sm:py-28">
-      <div className="container-zuna">
+      <div className="container-evotuc">
         <div className="overflow-hidden rounded-3xl bg-ink text-paper">
           <div className="grid lg:grid-cols-2">
             {/* Copy */}
