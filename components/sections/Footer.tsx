@@ -26,7 +26,7 @@ export default function Footer() {
             <Logo dark />
             <p className="mt-4 max-w-xs text-paper/70">{brand.tagline}</p>
             <p className="mt-4 font-mono text-xs text-paper/50">
-              Aliado operativo:{" "}
+              Aliado de{" "}
               <a
                 href={brand.partner.url}
                 target="_blank"
@@ -106,7 +106,8 @@ export default function Footer() {
 
         <div className="flex flex-col items-center justify-between gap-3 py-6 text-sm text-paper/50 sm:flex-row">
           <p>
-            © {year} {brand.legalName}. Todos los derechos reservados.
+            © {year} {brand.legalName} — {brand.name} es marca en trámite de
+            registro. Todos los derechos reservados.
           </p>
           <ul className="flex gap-5">
             <li>

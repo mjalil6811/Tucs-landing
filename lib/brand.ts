@@ -16,29 +16,30 @@ export const brand = {
   /** NOMBRE DE TRABAJO — reemplazable en segundos desde acá. */
   name: "EVOTUC",
   /** Razón social / nombre legal (footer, avisos). */
-  legalName: "EVOTUC Movilidad Eléctrica S.A.",
+  legalName: "MALER S.A.S.",
   /** Tagline corto de marca. */
   tagline: "Movilidad eléctrica que mueve tu negocio.",
   /** Descripción para SEO / Open Graph. */
   description:
-    "Importadora y comercializadora oficial de movilidad eléctrica en Argentina. Triciclos 100% eléctricos para pasajeros, delivery y carga. Aliada estratégica de GOU.",
+    "Importamos y comercializamos vehículos 100% eléctricos para pasajeros, delivery y carga. Cero emisiones, menor costo por kilómetro y un modelo para que el vehículo sea tuyo. Aliado de GOU.",
 
   /** Dominio canónico para SEO (sin slash final). */
   url: "https://evotuc.com.ar",
 
   /** Contacto */
-  email: "hola@evotuc.com.ar",
+  email: "info@evotuc.com",
   /** WhatsApp en formato internacional sin "+" ni espacios (para wa.me). */
-  whatsapp: "5491100000000",
+  whatsapp: "5493513902753",
   /** WhatsApp para mostrar al usuario. */
-  whatsappDisplay: "+54 9 11 0000-0000",
+  whatsappDisplay: "+54 9 351 390 2753",
   /** Dirección física (footer). */
-  address: "Av. del Libertador 1234, CABA, Argentina",
+  // TODO VERIFICAR: abreviatura "Pulv.", altura y barrio/CP.
+  address: "Pulv. Soldado Ramón Cabrera, Córdoba Capital, Argentina",
 
-  /** Aliado operativo. */
+  /** Aliado de GOU. */
   partner: {
     name: "GOU",
-    url: "https://gou.com.ar",
+    url: "https://gou.ar/",
   },
 
   /** Redes sociales (dejá "" para ocultar). */

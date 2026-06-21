@@ -171,6 +171,9 @@ export default function Savings() {
                   <p className="mt-2 font-display text-4xl font-extrabold text-ink lg:text-5xl">
                     <AnimatedValue value={monthlyCo2} format={fmtKg} />
                   </p>
+                  <p className="mt-2 text-sm text-ink/70">
+                    Menos emisiones en cada viaje, sin resignar rendimiento.
+                  </p>
                 </div>
               </div>
             </div>

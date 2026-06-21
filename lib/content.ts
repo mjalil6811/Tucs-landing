@@ -39,7 +39,7 @@ export const useCases: UseCase[] = [
     id: "delivery",
     icon: "delivery",
     title: "Delivery y última milla",
-    copy: "Reparto urbano silencioso y barato. Ideal para comercios, farmacias y apps de envío.",
+    copy: "Reparto urbano silencioso, económico y sin emisiones. Ideal para comercios, farmacias y apps de envío.",
     cta: "Equipar mi reparto",
     interest: "Delivery",
   },
@@ -47,7 +47,7 @@ export const useCases: UseCase[] = [
     id: "carga",
     icon: "cargo",
     title: "Carga liviana",
-    copy: "Mové mercadería por la ciudad sin gastar en nafta. Versiones de carga disponibles.",
+    copy: "Mové mercadería por la ciudad sin nafta y sin emisiones. Versiones de carga disponibles.",
     cta: "Ver versión carga",
     interest: "Comprar",
   },
@@ -113,19 +113,29 @@ export const joinPlans: JoinPlan[] = [
   },
 ];
 
-/** Stats de la operación con GOU (placeholders editables, no son ventas de EVOTUC). */
+/** Stats de la operación con GOU (no son ventas de EVOTUC). */
 export const cityStats = [
-  { value: 80, suffix: "+", label: "Unidades activas" },
-  { value: 1200, suffix: "+", label: "Viajes por día" },
+  { value: 5, suffix: "", label: "Unidades activas" },
+  { value: 50, suffix: "–90", label: "Viajes por día" },
   { value: 90, suffix: " días", label: "Para activar una ciudad" },
 ];
 
 export const cityPipeline = ["Posadas", "Corrientes", "San Francisco", "Nordelta"];
 
-export const socialStats = [
+export type SocialStat = {
+  value: number;
+  suffix: string;
+  label: string;
+  /** Si está presente, se muestra este texto en vez del contador animado. */
+  display?: string;
+};
+
+export const socialStats: SocialStat[] = [
   { value: 100, suffix: "%", label: "Eléctrico" },
-  { value: 0, suffix: " L", label: "De nafta por mes" },
-  { value: 5, suffix: " años", label: "Vida útil de batería estimada" },
+  { value: 0, suffix: " L", label: "Nafta por mes" },
+  // TODO: definir vida útil real de batería (no inventar número).
+  { value: 0, suffix: "", display: "Estimada", label: "Vida útil de batería" },
+  // TODO: confirmar tiempo/alcance real de soporte y repuestos locales.
   { value: 24, suffix: " h", label: "Soporte y repuestos locales" },
 ];
 
@@ -135,20 +145,9 @@ export type Testimonial = {
   role: string;
 };
 
-export const testimonials: Testimonial[] = [
-  {
-    quote:
-      "Pasé de alquilar a tener mi propia unidad. El gasto diario bajó muchísimo y no dependo de la nafta.",
-    name: "Conductor (placeholder)",
-    role: "Pasajeros · Reconquista, Santa Fe",
-  },
-  {
-    quote:
-      "Sumamos triciclos al reparto y el costo por entrega se desplomó. Encima, silencioso y sin humo.",
-    name: "Comercio (placeholder)",
-    role: "Delivery · última milla",
-  },
-];
+// TODO: agregar testimonios reales (sin placeholders). La sección queda oculta
+// mientras este array esté vacío.
+export const testimonials: Testimonial[] = [];
 
 export type FAQ = { q: string; a: string };
 
@@ -159,23 +158,28 @@ export const faqs: FAQ[] = [
   },
   {
     q: "¿Cuál es la autonomía real?",
-    a: "El modelo HB1500DZK-21 rinde entre 100 y 120 km por carga, según peso transportado, terreno, uso del A/C y estilo de manejo.",
+    // TODO: confirmar autonomía real medida (no usar dato de catálogo sin verificar).
+    a: "Estamos confirmando esta información. Escribinos por WhatsApp y te respondemos al instante.",
   },
   {
     q: "¿Cuánto tarda y cómo se carga?",
-    a: "Carga completa en 6 a 8 horas con toma domiciliaria estándar (sin instalación especial). Ideal para cargar de noche y arrancar el día al 100%.",
+    // TODO: confirmar tiempo de carga y tipo de toma real.
+    a: "Estamos confirmando esta información. Escribinos por WhatsApp y te respondemos al instante.",
   },
   {
     q: "¿Qué garantía tiene?",
-    a: "Garantía de fábrica más postventa, repuestos y soporte técnico en el país. Te damos respaldo real, no solo el equipo.",
+    // TODO: confirmar cobertura y plazo de garantía real con MALER.
+    a: "Estamos confirmando esta información. Escribinos por WhatsApp y te respondemos al instante.",
   },
   {
     q: "¿Hay financiación o leasing?",
-    a: "Sí. Ofrecemos compra directa, leasing (alquiler con opción a compra) y condiciones especiales para flotas y operadores.",
+    // TODO: confirmar opciones de financiación/leasing disponibles.
+    a: "Estamos confirmando esta información. Escribinos por WhatsApp y te respondemos al instante.",
   },
   {
     q: "¿Cuánto demora la entrega e importación?",
-    a: "Trabajamos con stock y reposición programada. Los plazos dependen del volumen y la configuración (pasajeros o carga); te los confirmamos al cotizar.",
+    // TODO: confirmar plazos reales de entrega e importación.
+    a: "Estamos confirmando esta información. Escribinos por WhatsApp y te respondemos al instante.",
   },
 ];
 

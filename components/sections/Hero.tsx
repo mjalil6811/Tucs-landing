@@ -23,17 +23,27 @@ export default function Hero() {
       <div className="container-evotuc grid items-center gap-12 lg:grid-cols-2">
         {/* Columna texto */}
         <div>
-          <p className="eyebrow">IMPORTADOR OFICIAL // ALIADO DE GOU</p>
+          <p className="eyebrow">
+            IMPORTADOR OFICIAL · ALIADO DE{" "}
+            <a
+              href="https://gou.ar/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline-offset-2 hover:underline"
+            >
+              GOU
+            </a>
+          </p>
 
           <h1 className="mt-4 font-display text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
-            El triciclo eléctrico que mueve{" "}
-            <span className="text-brand-gradient">personas, paquetes y negocios.</span>
+            Movilidad eléctrica para trasladar, repartir y trabajar{" "}
+            <span className="text-brand-gradient">sin contaminar.</span>
           </h1>
 
           <p className="mt-5 max-w-xl text-lg text-muted">
             Importamos y comercializamos vehículos 100% eléctricos para pasajeros,
-            delivery y carga. Menos costos, cero humo, y un camino claro para que
-            seas dueño.
+            delivery y carga. Más rendimiento por viaje, cero emisiones y un modelo
+            pensado para que el vehículo se pague solo y sea tuyo.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">

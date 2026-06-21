@@ -39,7 +39,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(brand.url),
   title: {
-    default: `${brand.name} · Movilidad eléctrica para personas, paquetes y negocios`,
+    default: `${brand.name} · Movilidad eléctrica sustentable para personas, paquetes y carga`,
     template: `%s · ${brand.name}`,
   },
   description: brand.description,
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     locale: "es_AR",
     url: brand.url,
     siteName: brand.name,
-    title: `${brand.name} · El triciclo eléctrico que mueve tu negocio`,
+    title: `${brand.name} · Movilidad eléctrica sustentable para personas, paquetes y carga`,
     description: brand.description,
     images: [
       {
@@ -74,7 +74,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${brand.name} · Movilidad eléctrica`,
+    title: `${brand.name} · Movilidad eléctrica sustentable para personas, paquetes y carga`,
     description: brand.description,
     images: ["/og.svg"],
   },

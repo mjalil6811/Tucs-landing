@@ -14,7 +14,11 @@ export default function SocialProof() {
             {socialStats.map((stat) => (
               <div key={stat.label} className="text-center">
                 <p className="font-display text-3xl font-extrabold sm:text-4xl">
-                  <Counter to={stat.value} suffix={stat.suffix} />
+                  {stat.display ? (
+                    stat.display
+                  ) : (
+                    <Counter to={stat.value} suffix={stat.suffix} />
+                  )}
                 </p>
                 <p className="mt-1 text-sm text-paper/80">{stat.label}</p>
               </div>
@@ -22,7 +26,8 @@ export default function SocialProof() {
           </div>
         </Reveal>
 
-        {/* Testimonios */}
+        {/* Testimonios — oculto hasta tener testimonios reales (ver lib/content.ts). */}
+        {testimonials.length > 0 && (
         <div className="mt-10 grid gap-5 md:grid-cols-2">
           {testimonials.map((t, i) => (
             <Reveal as="div" key={t.name} delay={i * 0.08}>
@@ -41,6 +46,7 @@ export default function SocialProof() {
             </Reveal>
           ))}
         </div>
+        )}
       </div>
     </section>
   );
