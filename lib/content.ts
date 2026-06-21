@@ -84,7 +84,7 @@ export const vehicleModel = "HB1500DZK-21";
 export const vehicleSpecs: Spec[] = [
   { label: "Motorización", value: "100%", unit: "eléctrico" },
   { label: "Autonomía", value: "100–120", unit: "km" },
-  { label: "Capacidad", value: "5–6", unit: "pasajeros" },
+  { label: "Capacidad", value: "4", unit: "pasajeros" },
   { label: "Batería litio", value: "60V / 6", unit: "kWh" },
   { label: "Tiempo de carga", value: "6–8", unit: "h" },
   { label: "Velocidad máx.", value: "35", unit: "km/h" },
@@ -127,7 +127,7 @@ export const cityStats = [
   { value: 100, suffix: "", label: "Viajes diarios en operación" },
 ];
 
-export const cityPipeline = ["Posadas", "Corrientes", "San Francisco", "Nordelta"];
+export const cityPipeline = ["Posadas", "Nordelta"];
 
 export type SocialStat = {
   value: number;

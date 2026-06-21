@@ -18,10 +18,12 @@ export default function Cities() {
             </h2>
             <p className="mt-5 text-lg text-paper/80">
               En alianza con <span className="font-semibold text-volt">{brand.partner.name}</span>{" "}
-              llevamos movilidad eléctrica a las calles. El caso{" "}
-              <strong className="text-paper">Reconquista (Santa Fe)</strong> ya es
-              un modelo validado: una operación real que demuestra que lo
-              eléctrico mueve negocios y ciudades.
+              ya estamos operando en{" "}
+              <strong className="text-paper">San Francisco (Córdoba)</strong> y{" "}
+              <strong className="text-paper">Corrientes</strong>: operaciones
+              reales que demuestran que lo eléctrico mueve negocios y ciudades.
+              Hace 3 años que venimos desarrollando la unidad justa para el
+              trabajo de todos los días.
             </p>
 
             <a
