@@ -17,7 +17,11 @@ export default function SocialProof() {
                   {stat.display ? (
                     stat.display
                   ) : (
-                    <Counter to={stat.value} suffix={stat.suffix} />
+                    <Counter
+                      to={stat.value}
+                      prefix={stat.prefix}
+                      suffix={stat.suffix}
+                    />
                   )}
                 </p>
                 <p className="mt-1 text-sm text-paper/80">{stat.label}</p>

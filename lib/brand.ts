@@ -18,7 +18,7 @@ export const brand = {
   /** Razón social / nombre legal (footer, avisos). */
   legalName: "MALER S.A.S.",
   /** Tagline corto de marca. */
-  tagline: "Movilidad eléctrica que mueve tu negocio.",
+  tagline: "Movilidad eléctrica que mueve tu negocio sin contaminar.",
   /** Descripción para SEO / Open Graph. */
   description:
     "Importamos y comercializamos vehículos 100% eléctricos para pasajeros, delivery y carga. Cero emisiones, menor costo por kilómetro y un modelo para que el vehículo sea tuyo. Aliado de GOU.",

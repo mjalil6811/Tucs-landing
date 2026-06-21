@@ -149,10 +149,20 @@ export function FacebookIcon(props: SVGProps<SVGSVGElement>) {
   );
 }
 
+export function TourismIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg {...base} {...props}>
+      <path d="M3 8h3l1.5-2.5h5L19 8h2a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z" />
+      <circle cx="12" cy="13" r="3.2" />
+    </svg>
+  );
+}
+
 export const useCaseIcons = {
   passengers: PassengersIcon,
   delivery: DeliveryIcon,
   cargo: CargoIcon,
   fleet: FleetIcon,
   city: CityIcon,
+  tourism: TourismIcon,
 };

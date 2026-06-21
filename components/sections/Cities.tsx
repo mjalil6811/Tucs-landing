@@ -1,7 +1,7 @@
 "use client";
 
 import { brand } from "@/lib/brand";
-import { cityStats, cityPipeline } from "@/lib/content";
+import { cityStats, cityPipeline, vehicleModel } from "@/lib/content";
 import Counter from "@/components/ui/Counter";
 import Reveal from "@/components/ui/Reveal";
 import { trackEvent } from "@/lib/analytics";
@@ -34,7 +34,7 @@ export default function Cities() {
           </Reveal>
 
           <Reveal as="div">
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-2 gap-4">
               {cityStats.map((stat) => (
                 <div
                   key={stat.label}
@@ -66,8 +66,8 @@ export default function Cities() {
             </div>
 
             <p className="mt-4 font-mono text-[11px] leading-relaxed text-paper/50">
-              Las métricas corresponden a la operación con {brand.partner.name}, no
-              son ventas de {brand.name}.
+              Datos de producto del modelo {vehicleModel}. Parque y operación en
+              alianza con {brand.partner.name}.
             </p>
           </Reveal>
         </div>

@@ -18,7 +18,7 @@ export default function Vehicle() {
           <p className="eyebrow text-volt">EL VEHÍCULO</p>
           <div className="mt-3 flex flex-wrap items-end justify-between gap-4">
             <h2 className="max-w-2xl font-display text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl">
-              Hecho para la calle, no para el taller.
+              Diseñado para trabajar todos los días.
             </h2>
             <span className="rounded-full border border-paper/20 px-4 py-1.5 font-mono text-xs text-paper/80">
               MODELO {vehicleModel}

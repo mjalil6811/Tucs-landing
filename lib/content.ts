@@ -19,7 +19,7 @@ export const trustChips = [
 
 export type UseCase = {
   id: string;
-  icon: "passengers" | "delivery" | "cargo" | "fleet" | "city";
+  icon: "passengers" | "delivery" | "cargo" | "fleet" | "city" | "tourism";
   title: string;
   copy: string;
   cta: string;
@@ -67,6 +67,14 @@ export const useCases: UseCase[] = [
     cta: "Operar en mi ciudad",
     interest: "Operar una ciudad",
   },
+  {
+    id: "turismo",
+    icon: "tourism",
+    title: "Turismo y paseos",
+    copy: "City tours y paseos eléctricos, silenciosos y sin humo. Ideal para municipios, hoteles y operadores turísticos.",
+    cta: "Sumar turismo",
+    interest: "Comprar",
+  },
 ];
 
 export type Spec = { label: string; value: string; unit?: string };
@@ -113,11 +121,10 @@ export const joinPlans: JoinPlan[] = [
   },
 ];
 
-/** Stats de la operación con GOU (no son ventas de EVOTUC). */
+/** Stats del parque EVOTUC en operación (en alianza con GOU). */
 export const cityStats = [
-  { value: 5, suffix: "", label: "Unidades activas" },
-  { value: 50, suffix: "–90", label: "Viajes por día" },
-  { value: 90, suffix: " días", label: "Para activar una ciudad" },
+  { value: 25, suffix: "", label: "Unidades en el parque EVOTUC" },
+  { value: 100, suffix: "", label: "Viajes diarios en operación" },
 ];
 
 export const cityPipeline = ["Posadas", "Corrientes", "San Francisco", "Nordelta"];
@@ -126,17 +133,18 @@ export type SocialStat = {
   value: number;
   suffix: string;
   label: string;
+  /** Prefijo opcional antes del número (p. ej. "hasta "). */
+  prefix?: string;
   /** Si está presente, se muestra este texto en vez del contador animado. */
   display?: string;
 };
 
+/** Datos de producto del modelo HB1500DZK-21. */
 export const socialStats: SocialStat[] = [
   { value: 100, suffix: "%", label: "Eléctrico" },
-  { value: 0, suffix: " L", label: "Nafta por mes" },
-  // TODO: definir vida útil real de batería (no inventar número).
-  { value: 0, suffix: "", display: "Estimada", label: "Vida útil de batería" },
-  // TODO: confirmar tiempo/alcance real de soporte y repuestos locales.
-  { value: 24, suffix: " h", label: "Soporte y repuestos locales" },
+  { value: 0, suffix: " L", label: "De nafta" },
+  { value: 100, suffix: "–120 km", label: "De autonomía" },
+  { value: 500, prefix: "hasta ", suffix: " kg", label: "De carga" },
 ];
 
 export type Testimonial = {
@@ -158,28 +166,23 @@ export const faqs: FAQ[] = [
   },
   {
     q: "¿Cuál es la autonomía real?",
-    // TODO: confirmar autonomía real medida (no usar dato de catálogo sin verificar).
-    a: "Estamos confirmando esta información. Escribinos por WhatsApp y te respondemos al instante.",
+    a: "La autonomía estimada es de 100 a 120 km por carga, medida a velocidad constante de 30 km/h con carga nominal. En uso urbano real (arranques, paradas y carga variable) el rango efectivo depende de la operación, pero la batería de litio de 6 kWh cubre una jornada completa.",
   },
   {
     q: "¿Cuánto tarda y cómo se carga?",
-    // TODO: confirmar tiempo de carga y tipo de toma real.
-    a: "Estamos confirmando esta información. Escribinos por WhatsApp y te respondemos al instante.",
+    a: "La carga completa demora entre 6 y 8 horas en una toma domiciliaria estándar, sin infraestructura especial. Batería de litio de 60 V y 6 kWh (100 Ah), pensada para cargar de noche y operar todo el día.",
   },
   {
     q: "¿Qué garantía tiene?",
-    // TODO: confirmar cobertura y plazo de garantía real con MALER.
-    a: "Estamos confirmando esta información. Escribinos por WhatsApp y te respondemos al instante.",
+    a: "El vehículo cuenta con certificación de batería UN38.3 y certificaciones de importación. Incluye 12 meses de garantía comercial, con postventa y repuestos en el país.",
   },
   {
     q: "¿Hay financiación o leasing?",
-    // TODO: confirmar opciones de financiación/leasing disponibles.
-    a: "Estamos confirmando esta información. Escribinos por WhatsApp y te respondemos al instante.",
+    a: "Tres caminos: compra directa, leasing (alquiler con opción a compra) y condiciones para flotas. En el leasing trabajás con la unidad mientras pagás la cuota, hasta volverte dueño.",
   },
   {
     q: "¿Cuánto demora la entrega e importación?",
-    // TODO: confirmar plazos reales de entrega e importación.
-    a: "Estamos confirmando esta información. Escribinos por WhatsApp y te respondemos al instante.",
+    a: "El plazo de entrega estimado es de 90 días desde la confirmación del pedido. Al cotizar te confirmamos disponibilidad y tiempos según stock y configuración.",
   },
 ];
 
