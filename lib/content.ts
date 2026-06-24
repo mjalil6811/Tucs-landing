@@ -83,7 +83,7 @@ export const vehicleModel = "HB1500DZK-21";
 
 export const vehicleSpecs: Spec[] = [
   { label: "Motorización", value: "100%", unit: "eléctrico" },
-  { label: "Autonomía", value: "100–120", unit: "km" },
+  { label: "Autonomía", value: "120–150", unit: "km" },
   { label: "Capacidad", value: "4", unit: "pasajeros" },
   { label: "Batería litio", value: "60V / 6", unit: "kWh" },
   { label: "Tiempo de carga", value: "6–8", unit: "h" },
@@ -143,7 +143,7 @@ export type SocialStat = {
 export const socialStats: SocialStat[] = [
   { value: 100, suffix: "%", label: "Eléctrico" },
   { value: 0, suffix: " L", label: "De nafta" },
-  { value: 100, suffix: "–120 km", label: "De autonomía" },
+  { value: 120, suffix: "–150 km", label: "De autonomía" },
   { value: 500, prefix: "hasta ", suffix: " kg", label: "De carga" },
 ];
 
@@ -166,7 +166,7 @@ export const faqs: FAQ[] = [
   },
   {
     q: "¿Cuál es la autonomía real?",
-    a: "La autonomía estimada es de 100 a 120 km por carga, medida a velocidad constante de 30 km/h con carga nominal. En uso urbano real (arranques, paradas y carga variable) el rango efectivo depende de la operación, pero la batería de litio de 6 kWh cubre una jornada completa.",
+    a: "La autonomía estimada es de 120 a 150 km por carga, medida a velocidad constante de 30 km/h con carga nominal. En uso urbano real (arranques, paradas y carga variable) el rango efectivo depende de la operación, pero la batería de litio de 6 kWh cubre una jornada completa.",
   },
   {
     q: "¿Cuánto tarda y cómo se carga?",

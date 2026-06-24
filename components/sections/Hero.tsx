@@ -82,7 +82,7 @@ export default function Hero() {
             className="relative aspect-[3/2] overflow-hidden rounded-3xl shadow-lift"
           >
             <Image
-              src="/images/evotuc-hero-branded.jpg"
+              src="/images/evotuc-hero-verde.jpg"
               alt="Triciclo eléctrico EVOTUC modelo HB1500DZK-21, vista lateral"
               fill
               priority
