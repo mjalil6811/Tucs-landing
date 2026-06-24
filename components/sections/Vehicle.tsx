@@ -5,9 +5,9 @@ import {
   vehicleSpecs,
   vehicleFeatures,
 } from "@/lib/content";
+import Image from "next/image";
 import { CheckIcon, PdfIcon } from "@/components/ui/Icons";
 import Reveal from "@/components/ui/Reveal";
-import TukTuk from "@/components/ui/TukTuk";
 import { trackEvent } from "@/lib/analytics";
 
 export default function Vehicle() {
@@ -27,10 +27,19 @@ export default function Vehicle() {
         </Reveal>
 
         <div className="mt-12 grid gap-10 lg:grid-cols-[1fr_1.1fr] lg:items-center">
-          {/* Visual */}
+          {/* Visual: foto real del vehículo EVOTUC branded */}
           <Reveal as="div">
             <div className="rounded-3xl bg-brand-gradient p-8">
-              <TukTuk className="mx-auto w-full max-w-sm" />
+              <div className="relative aspect-[3/4] overflow-hidden rounded-2xl shadow-lift">
+                <Image
+                  src="/images/evotuc-vehiculo-branded.jpg"
+                  alt="Triciclo eléctrico EVOTUC, vista frontal con puerta abierta"
+                  fill
+                  loading="lazy"
+                  sizes="(max-width:768px) 100vw, 45vw"
+                  className="object-cover"
+                />
+              </div>
               <ul className="mt-6 flex flex-wrap gap-2">
                 {vehicleFeatures.map((f) => (
                   <li

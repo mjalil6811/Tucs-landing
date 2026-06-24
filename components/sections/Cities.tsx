@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { brand } from "@/lib/brand";
 import { cityStats, cityPipeline, vehicleModel } from "@/lib/content";
 import Counter from "@/components/ui/Counter";
@@ -36,6 +37,17 @@ export default function Cities() {
           </Reveal>
 
           <Reveal as="div">
+            {/* Foto de operación real EVOTUC branded */}
+            <div className="relative mb-6 aspect-[4/3] overflow-hidden rounded-3xl shadow-lift">
+              <Image
+                src="/images/evotuc-operacion-branded.jpg"
+                alt="Triciclo eléctrico EVOTUC en operación urbana con pasajeros"
+                fill
+                loading="lazy"
+                sizes="(max-width:768px) 100vw, 50vw"
+                className="object-cover"
+              />
+            </div>
             <div className="grid grid-cols-2 gap-4">
               {cityStats.map((stat) => (
                 <div

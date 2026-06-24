@@ -1,10 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import { trustChips } from "@/lib/content";
 import { trackEvent } from "@/lib/analytics";
-import PulseLine from "@/components/ui/PulseLine";
-import TukTuk from "@/components/ui/TukTuk";
 
 export default function Hero() {
   const reduce = useReducedMotion();
@@ -74,29 +73,24 @@ export default function Hero() {
           </ul>
         </div>
 
-        {/* Columna visual: panel violeta + pulso lima + triciclo */}
+        {/* Columna visual: foto real del triciclo EVOTUC branded */}
         <div className="relative">
           <motion.div
             initial={reduce ? false : { opacity: 0, scale: 0.96 }}
             animate={reduce ? {} : { opacity: 1, scale: 1 }}
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-            className="relative overflow-hidden rounded-3xl bg-brand-gradient p-6 shadow-lift sm:p-10"
+            className="relative aspect-[3/2] overflow-hidden rounded-3xl shadow-lift"
           >
-            {/* Pulso de fondo (signature) */}
-            <PulseLine
-              className="absolute inset-x-0 top-1/2 h-16 w-full -translate-y-1/2 opacity-90"
-              variant="active"
+            <Image
+              src="/images/evotuc-hero-branded.jpg"
+              alt="Triciclo eléctrico EVOTUC modelo HB1500DZK-21, vista lateral"
+              fill
+              priority
+              sizes="(max-width:768px) 100vw, 50vw"
+              className="object-cover"
             />
 
-            <motion.div
-              animate={reduce ? {} : { y: [0, -10, 0] }}
-              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-              className="relative z-10"
-            >
-              <TukTuk className="mx-auto w-full max-w-md drop-shadow-2xl" />
-            </motion.div>
-
-            <div className="relative z-10 mt-2 flex items-center justify-between font-mono text-xs text-paper/90">
+            <div className="absolute inset-x-0 bottom-0 z-10 flex items-center justify-between bg-gradient-to-t from-ink/70 to-transparent px-5 py-4 font-mono text-xs text-paper/90">
               <span>MODELO HB1500DZK-21</span>
               <span className="rounded-full bg-volt px-3 py-1 font-semibold text-ink">
                 SILENCIOSO
