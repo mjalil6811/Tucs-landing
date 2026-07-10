@@ -5,6 +5,7 @@
 
 export const navLinks = [
   { label: "Casos de uso", href: "#casos-de-uso" },
+  { label: "Catálogo de productos", href: "#catalogo" },
   { label: "El vehículo", href: "#el-vehiculo" },
   { label: "Ahorro", href: "#ahorro" },
   { label: "Para ciudades", href: "#para-ciudades" },
@@ -24,6 +25,8 @@ export type UseCase = {
   copy: string;
   cta: string;
   interest: string; // valor para el selector del formulario
+  image: string; // ruta en public/ (PNG con fondo transparente)
+  alt: string;
 };
 
 export const useCases: UseCase[] = [
@@ -34,6 +37,8 @@ export const useCases: UseCase[] = [
     copy: "Sumate como conductor y volvete dueño de tu unidad y de tu tiempo. El modelo que ya rueda con GOU.",
     cta: "Quiero ser dueño",
     interest: "Comprar",
+    image: "/images/catalogo/pasajeros-qj.png",
+    alt: "Triciclo eléctrico de pasajeros para B2C",
   },
   {
     id: "delivery",
@@ -42,6 +47,8 @@ export const useCases: UseCase[] = [
     copy: "Reparto urbano silencioso, económico y sin emisiones. Ideal para comercios, farmacias y apps de envío.",
     cta: "Equipar mi reparto",
     interest: "Delivery",
+    image: "/images/catalogo/furgon-ky5.png",
+    alt: "Furgón eléctrico para delivery y última milla",
   },
   {
     id: "carga",
@@ -50,6 +57,8 @@ export const useCases: UseCase[] = [
     copy: "Mové mercadería por la ciudad sin nafta y sin emisiones. Versiones de carga disponibles.",
     cta: "Ver versión carga",
     interest: "Comprar",
+    image: "/images/catalogo/carga-h21.png",
+    alt: "Triciclo eléctrico de carga liviana",
   },
   {
     id: "flotas",
@@ -58,6 +67,8 @@ export const useCases: UseCase[] = [
     copy: "Equipá tu operación con unidades, repuestos y soporte. Financiación para flotas.",
     cta: "Cotizar flota",
     interest: "Flota",
+    image: "/images/catalogo/flotas-lineup.png",
+    alt: "Flota de vehículos eléctricos EVOTUC",
   },
   {
     id: "ciudades",
@@ -66,6 +77,8 @@ export const useCases: UseCase[] = [
     copy: "Abrí una ciudad con un modelo ya probado. Activación en ~90 días.",
     cta: "Operar en mi ciudad",
     interest: "Operar una ciudad",
+    image: "/images/catalogo/minicab-qg58.png",
+    alt: "Minicab eléctrico para operación en ciudades",
   },
   {
     id: "turismo",
@@ -74,6 +87,99 @@ export const useCases: UseCase[] = [
     copy: "City tours y paseos eléctricos, silenciosos y sin humo. Ideal para municipios, hoteles y operadores turísticos.",
     cta: "Sumar turismo",
     interest: "Comprar",
+    image: "/images/catalogo/turismo-hos2.png",
+    alt: "Triciclo eléctrico para turismo y paseos",
+  },
+];
+
+export type CatalogoProducto = {
+  id: string;
+  tipo: string; // rótulo/eyebrow (violeta, mayúsculas)
+  nombre: string;
+  image: string; // ruta en public/ (PNG con fondo transparente)
+  alt: string;
+  specs: string[]; // 3–4 specs reales, sin precio
+};
+
+/** Catálogo de productos EVOTUC (specs reales, sin precios). */
+export const catalogoProductos: CatalogoProducto[] = [
+  {
+    id: "pasajeros-qj",
+    tipo: "PASAJEROS",
+    nombre: "Jinpeng QJ",
+    image: "/images/catalogo/pasajeros-qj.png",
+    alt: "Triciclo eléctrico de pasajeros Jinpeng QJ, cabina cerrada",
+    specs: [
+      "Motor 60V · 1000W",
+      "Batería litio 64V/50Ah",
+      "Autonomía 70 km",
+      "5 puertas · 3 pasajeros",
+    ],
+  },
+  {
+    id: "carga-h21",
+    tipo: "CARGA",
+    nombre: "Huaihai H21-150/160",
+    image: "/images/catalogo/carga-h21.png",
+    alt: "Triciclo eléctrico de carga abierta Huaihai H21-150/160",
+    specs: [
+      "Motor 1200/2200W",
+      "Batería 45/58Ah",
+      "Autonomía 50–80 km",
+      "Caja 1500×1100 mm",
+    ],
+  },
+  {
+    id: "moto-ego-plus",
+    tipo: "MOTO ELÉCTRICA",
+    nombre: "Jinpeng E-GO PLUS",
+    image: "/images/catalogo/moto-ego-plus.png",
+    alt: "Motocicleta eléctrica Jinpeng E-GO PLUS",
+    specs: [
+      "Motor 72V · 2000W",
+      "Batería litio 72V/30Ah",
+      "Autonomía 90 km",
+      "Certificación EEC",
+    ],
+  },
+  {
+    id: "minicab-qg58",
+    tipo: "MINICAB",
+    nombre: "Huaihai QG58",
+    image: "/images/catalogo/minicab-qg58.png",
+    alt: "Minicab eléctrico de cabina cerrada Huaihai QG58",
+    specs: [
+      "Motor 900W",
+      "Batería 60V/58Ah",
+      "Autonomía 60–70 km",
+      "Cabina cerrada",
+    ],
+  },
+  {
+    id: "furgon-ky5",
+    tipo: "DELIVERY / FURGÓN",
+    nombre: "Huaihai KY5",
+    image: "/images/catalogo/furgon-ky5.png",
+    alt: "Furgón eléctrico de reparto con caja cerrada Huaihai KY5",
+    specs: [
+      "Motor 1000W",
+      "Batería 58Ah",
+      "Autonomía 60–80 km",
+      "Caja cerrada 1400×900×975 mm",
+    ],
+  },
+  {
+    id: "turismo-hos2",
+    tipo: "TURISMO",
+    nombre: "Huaihai HO-S2",
+    image: "/images/catalogo/turismo-hos2.png",
+    alt: "Triciclo eléctrico de paseo Huaihai HO-S2",
+    specs: [
+      "Motor 650W",
+      "Batería 20Ah",
+      "Autonomía 40–50 km",
+      "Asientos tipo paseo",
+    ],
   },
 ];
 

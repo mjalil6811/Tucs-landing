@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/sections/Hero";
 import AllianceBar from "@/components/sections/AllianceBar";
 import UseCases from "@/components/sections/UseCases";
+import Catalogo from "@/components/Catalogo";
 import Vehicle from "@/components/sections/Vehicle";
 import Savings from "@/components/sections/Savings";
 import HowToJoin from "@/components/sections/HowToJoin";
@@ -52,6 +53,7 @@ export default function Home() {
         <Hero />
         <AllianceBar />
         <UseCases />
+        <Catalogo />
         <Vehicle />
         <SectionDivider />
         <Savings />

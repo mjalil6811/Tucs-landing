@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useCases } from "@/lib/content";
 import { useCaseIcons, ArrowIcon } from "@/components/ui/Icons";
 import Reveal from "@/components/ui/Reveal";
@@ -26,6 +27,17 @@ export default function UseCases() {
             return (
               <Reveal as="div" key={uc.id} delay={i * 0.06}>
                 <article className="card group flex h-full flex-col hover:-translate-y-1 hover:shadow-lift">
+                  {/* Foto del producto (PNG con fondo transparente sobre fondo claro) */}
+                  <div className="relative mb-5 aspect-[4/3] overflow-hidden rounded-xl bg-violet-50">
+                    <Image
+                      src={uc.image}
+                      alt={uc.alt}
+                      fill
+                      loading="lazy"
+                      sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw"
+                      className="object-contain p-5"
+                    />
+                  </div>
                   <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-paper">
                     <Icon />
                   </span>
