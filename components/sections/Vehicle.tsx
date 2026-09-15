@@ -27,21 +27,21 @@ export default function Vehicle() {
         </Reveal>
 
         <div className="mt-12 grid gap-10 lg:grid-cols-[1fr_1.1fr] lg:items-center">
-          {/* Visual: imagen de catálogo del EVOTUC City 7500 */}
+          {/* Visual: foto de catálogo del EVOTUC City 7500 */}
           <Reveal as="div">
             <div className="rounded-3xl bg-brand-gradient p-8">
-              <div className="relative aspect-[3/4] overflow-hidden rounded-2xl">
+              <div className="relative aspect-square overflow-hidden rounded-2xl shadow-lift">
                 <Image
-                  src="/images/evotuc-city7500-stock.png"
-                  alt="Triciclo eléctrico EVOTUC City 7500, modelo SANDI SD7500-KKDZK-1"
+                  src="/images/evotuc-city7500-vehiculo.jpg"
+                  alt="Triciclo eléctrico EVOTUC City 7500, modelo SANDI SD7500, vista trasera 3/4"
                   fill
                   loading="lazy"
                   sizes="(max-width:768px) 100vw, 45vw"
-                  className="object-contain p-4 drop-shadow-2xl"
+                  className="object-cover"
                 />
               </div>
               <p className="mt-2 text-center font-mono text-[11px] text-paper/50">
-                Imagen ilustrativa del modelo · foto real próximamente
+                Foto de catálogo del fabricante · unidad EVOTUC podría variar en detalles
               </p>
               <ul className="mt-4 flex flex-wrap gap-2">
                 {vehicleFeatures.map((f) => (
