@@ -1,6 +1,7 @@
 /**
  * Contenido editable de la landing (copy + datos).
- * Las specs del vehículo son reales (modelo HB1500DZK-21). No incluir precios.
+ * Las specs del vehículo son reales (modelo SANDI SD7500-KKDZK-1, "EVOTUC City 7500").
+ * No incluir precios.
  */
 
 export const navLinks = [
@@ -34,7 +35,7 @@ export const useCases: UseCase[] = [
     id: "pasajeros",
     icon: "passengers",
     title: "Pasajeros (B2C)",
-    copy: "Sumate como conductor y volvete dueño de tu unidad y de tu tiempo. El modelo que ya rueda con GOU.",
+    copy: "Sumate como conductor y volvete dueño de tu unidad y de tu tiempo, en alianza con GOU.",
     cta: "Quiero ser dueño",
     interest: "Comprar",
     image: "/images/catalogo/evotuc-city.png",
@@ -106,14 +107,14 @@ export const catalogoProductos: CatalogoProducto[] = [
   {
     id: "evotuc-city",
     tipo: "PASAJEROS",
-    nombre: "EVOTUC City",
+    nombre: "EVOTUC City 7500",
     image: "/images/catalogo/evotuc-city.png",
-    alt: "Triciclo eléctrico de pasajeros EVOTUC City, tipo tuk-tuk",
+    alt: "Triciclo eléctrico de pasajeros EVOTUC City 7500, tipo tuk-tuk",
     specs: [
-      "Motor 72V · 3000W",
-      "Batería litio 76.8V/150Ah (LFP)",
-      "Autonomía 150 km",
-      "3 pasajeros · toldo",
+      "Motor brushless 7,5 kW · 72V",
+      "Batería litio 76,8V / 168Ah",
+      "Autonomía 221 km · 72 km/h máx.",
+      "3 pasajeros · frenos hidráulicos",
     ],
   },
   {
@@ -185,24 +186,24 @@ export const catalogoProductos: CatalogoProducto[] = [
 
 export type Spec = { label: string; value: string; unit?: string };
 
-export const vehicleModel = "HB1500DZK-21";
+export const vehicleModel = "SD7500-KKDZK-1";
 
 export const vehicleSpecs: Spec[] = [
-  { label: "Motorización", value: "100%", unit: "eléctrico" },
-  { label: "Autonomía", value: "120–150", unit: "km" },
-  { label: "Capacidad", value: "4", unit: "pasajeros" },
-  { label: "Batería litio", value: "60V / 6", unit: "kWh" },
-  { label: "Tiempo de carga", value: "6–8", unit: "h" },
-  { label: "Velocidad máx.", value: "35", unit: "km/h" },
-  { label: "Carga útil", value: "hasta 500", unit: "kg" },
-  { label: "Motor", value: "2", unit: "kW" },
+  { label: "Autonomía", value: "221", unit: "km" },
+  { label: "Velocidad máx.", value: "72", unit: "km/h" },
+  { label: "Potencia", value: "7,5", unit: "kW · 72V" },
+  { label: "Capacidad", value: "3", unit: "pasajeros" },
+  { label: "Batería litio", value: "76,8V / 168", unit: "Ah" },
+  { label: "Pendiente máx.", value: "≥ 35", unit: "%" },
+  { label: "Frenos", value: "Hidráulicos", unit: "20 m" },
+  { label: "Controlador", value: "Smart 72V", unit: "IP67" },
 ];
 
 export const vehicleFeatures = [
-  "Triciclo cerrado",
-  "5 puertas",
-  "A/C de techo",
-  "Panel solar",
+  "3 pasajeros",
+  "Eje diferencial integrado",
+  "Frenos hidráulicos",
+  "Componentes IP67",
 ];
 
 export type JoinPlan = {
@@ -245,12 +246,12 @@ export type SocialStat = {
   display?: string;
 };
 
-/** Datos de producto del modelo HB1500DZK-21. */
+/** Datos de producto del modelo SD7500-KKDZK-1 (EVOTUC City 7500). */
 export const socialStats: SocialStat[] = [
   { value: 100, suffix: "%", label: "Eléctrico" },
   { value: 0, suffix: " L", label: "De nafta" },
-  { value: 120, suffix: "–150 km", label: "De autonomía" },
-  { value: 500, prefix: "hasta ", suffix: " kg", label: "De carga" },
+  { value: 221, suffix: " km", label: "De autonomía" },
+  { value: 72, suffix: " km/h", label: "Velocidad máxima" },
 ];
 
 export type Testimonial = {
@@ -272,11 +273,11 @@ export const faqs: FAQ[] = [
   },
   {
     q: "¿Cuál es la autonomía real?",
-    a: "La autonomía estimada es de 120 a 150 km por carga, medida a velocidad constante de 30 km/h con carga nominal. En uso urbano real (arranques, paradas y carga variable) el rango efectivo depende de la operación, pero la batería de litio de 6 kWh cubre una jornada completa.",
+    a: "El fabricante certifica 221 km de autonomía por carga para el EVOTUC City 7500, con una batería de litio de 76,8 V / 168 Ah (aprox. 12,9 kWh). En uso urbano real (arranques, paradas y carga variable) el rango efectivo puede variar según la operación, pero está dimensionada para cubrir una jornada completa de servicio con una sola carga.",
   },
   {
     q: "¿Cuánto tarda y cómo se carga?",
-    a: "La carga completa demora entre 6 y 8 horas en una toma domiciliaria estándar, sin infraestructura especial. Batería de litio de 60 V y 6 kWh (100 Ah), pensada para cargar de noche y operar todo el día.",
+    a: "Se carga sobre una toma domiciliaria estándar, sin infraestructura especial, pensada para una carga nocturna que cubra toda la jornada siguiente. El tiempo exacto depende del cargador de la unidad; te lo confirmamos al cotizar.",
   },
   {
     q: "¿Qué garantía tiene?",

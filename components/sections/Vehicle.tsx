@@ -27,20 +27,23 @@ export default function Vehicle() {
         </Reveal>
 
         <div className="mt-12 grid gap-10 lg:grid-cols-[1fr_1.1fr] lg:items-center">
-          {/* Visual: foto real del vehículo EVOTUC branded */}
+          {/* Visual: imagen de catálogo del EVOTUC City 7500 */}
           <Reveal as="div">
             <div className="rounded-3xl bg-brand-gradient p-8">
-              <div className="relative aspect-[3/4] overflow-hidden rounded-2xl shadow-lift">
+              <div className="relative aspect-[3/4] overflow-hidden rounded-2xl">
                 <Image
-                  src="/images/evotuc-vehiculo-branded.jpg"
-                  alt="Triciclo eléctrico EVOTUC, vista frontal con puerta abierta"
+                  src="/images/evotuc-city7500-stock.png"
+                  alt="Triciclo eléctrico EVOTUC City 7500, modelo SANDI SD7500-KKDZK-1"
                   fill
                   loading="lazy"
                   sizes="(max-width:768px) 100vw, 45vw"
-                  className="object-cover"
+                  className="object-contain p-4 drop-shadow-2xl"
                 />
               </div>
-              <ul className="mt-6 flex flex-wrap gap-2">
+              <p className="mt-2 text-center font-mono text-[11px] text-paper/50">
+                Imagen ilustrativa del modelo · foto real próximamente
+              </p>
+              <ul className="mt-4 flex flex-wrap gap-2">
                 {vehicleFeatures.map((f) => (
                   <li
                     key={f}
@@ -88,7 +91,7 @@ export default function Vehicle() {
                 Descargar ficha técnica (PDF)
               </a>
               <p className="mt-3 font-mono text-xs text-paper/60">
-                Disponible en configuración pasajeros y carga.
+                Ficha técnica oficial del fabricante SANDI.
               </p>
             </div>
           </div>

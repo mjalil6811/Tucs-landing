@@ -73,30 +73,35 @@ export default function Hero() {
           </ul>
         </div>
 
-        {/* Columna visual: foto real del triciclo EVOTUC branded */}
+        {/* Columna visual: EVOTUC City 7500 (imagen de catálogo del fabricante) */}
         <div className="relative">
           <motion.div
             initial={reduce ? false : { opacity: 0, scale: 0.96 }}
             animate={reduce ? {} : { opacity: 1, scale: 1 }}
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-            className="relative aspect-[3/2] overflow-hidden rounded-3xl shadow-lift"
+            className="relative aspect-[3/2] overflow-hidden rounded-3xl bg-brand-gradient shadow-lift"
           >
-            <Image
-              src="/images/evotuc-hero-verde.jpg"
-              alt="Triciclo eléctrico EVOTUC modelo HB1500DZK-21, vista lateral"
-              fill
-              priority
-              sizes="(max-width:768px) 100vw, 50vw"
-              className="object-cover"
-            />
+            <div className="absolute inset-0 p-8 sm:p-12">
+              <Image
+                src="/images/evotuc-city7500-stock.png"
+                alt="Triciclo eléctrico EVOTUC City 7500, modelo SANDI SD7500-KKDZK-1"
+                fill
+                priority
+                sizes="(max-width:768px) 100vw, 50vw"
+                className="object-contain drop-shadow-2xl"
+              />
+            </div>
 
             <div className="absolute inset-x-0 bottom-0 z-10 flex items-center justify-between bg-gradient-to-t from-ink/70 to-transparent px-5 py-4 font-mono text-xs text-paper/90">
-              <span>MODELO HB1500DZK-21</span>
+              <span>MODELO SD7500-KKDZK-1</span>
               <span className="rounded-full bg-volt px-3 py-1 font-semibold text-ink">
-                SILENCIOSO
+                221 KM AUTONOMÍA
               </span>
             </div>
           </motion.div>
+          <p className="mt-2 text-right font-mono text-[11px] text-muted">
+            Imagen ilustrativa del modelo · foto real próximamente
+          </p>
         </div>
       </div>
     </section>
