@@ -6,7 +6,6 @@
 
 export const navLinks = [
   { label: "Casos de uso", href: "#casos-de-uso" },
-  { label: "Catálogo de productos", href: "#catalogo" },
   { label: "El vehículo", href: "#el-vehiculo" },
   { label: "Ahorro", href: "#ahorro" },
   { label: "Para ciudades", href: "#para-ciudades" },
@@ -90,97 +89,6 @@ export const useCases: UseCase[] = [
     interest: "Comprar",
     image: "/images/catalogo/evotuc-paseo.png",
     alt: "Triciclo eléctrico para turismo y paseos",
-  },
-];
-
-export type CatalogoProducto = {
-  id: string;
-  tipo: string; // rótulo/eyebrow (violeta, mayúsculas)
-  nombre: string;
-  image: string; // ruta en public/ (PNG con fondo transparente)
-  alt: string;
-  specs: string[]; // 3–4 specs reales, sin precio
-};
-
-/** Catálogo de productos EVOTUC (specs reales, sin precios). */
-export const catalogoProductos: CatalogoProducto[] = [
-  {
-    id: "evotuc-city",
-    tipo: "PASAJEROS",
-    nombre: "EVOTUC City 7500",
-    image: "/images/catalogo/evotuc-city.png",
-    alt: "Triciclo eléctrico de pasajeros EVOTUC City 7500, tipo tuk-tuk",
-    specs: [
-      "Motor brushless 7,5 kW · 72V",
-      "Batería litio 76,8V / 168Ah",
-      "Autonomía 221 km · 72 km/h máx.",
-      "3 pasajeros · frenos hidráulicos",
-    ],
-  },
-  {
-    id: "evotuc-carga",
-    tipo: "CARGA",
-    nombre: "EVOTUC Carga",
-    image: "/images/catalogo/evotuc-carga.png",
-    alt: "Triciclo eléctrico de carga abierta EVOTUC Carga",
-    specs: [
-      "Motor 1200/2200W",
-      "Batería 45/58Ah",
-      "Autonomía 50–80 km",
-      "Caja 1500×1100 mm",
-    ],
-  },
-  {
-    id: "evotuc-moto",
-    tipo: "MOTO ELÉCTRICA",
-    nombre: "EVOTUC Moto",
-    image: "/images/catalogo/evotuc-moto.png",
-    alt: "Motocicleta eléctrica EVOTUC Moto",
-    specs: [
-      "Motor 72V · 2000W",
-      "Batería litio 72V/30Ah",
-      "Autonomía 90 km",
-      "Certificación EEC",
-    ],
-  },
-  {
-    id: "evotuc-mini",
-    tipo: "MINICAB",
-    nombre: "EVOTUC Mini",
-    image: "/images/catalogo/evotuc-mini.png",
-    alt: "Minicab eléctrico de cabina cerrada EVOTUC Mini",
-    specs: [
-      "Motor 1100/1500W",
-      "Batería 60V/58Ah",
-      "Autonomía 60–70 km",
-      "Cabina cerrada",
-    ],
-  },
-  {
-    id: "evotuc-reparto",
-    tipo: "DELIVERY / FURGÓN",
-    nombre: "EVOTUC Reparto",
-    image: "/images/catalogo/evotuc-reparto.png",
-    alt: "Furgón eléctrico de reparto EVOTUC Reparto",
-    specs: [
-      "Motor 1000W",
-      "Batería 58Ah",
-      "Autonomía 60–80 km",
-      "Caja cerrada 1400×900×975 mm",
-    ],
-  },
-  {
-    id: "evotuc-paseo",
-    tipo: "TURISMO",
-    nombre: "EVOTUC Paseo",
-    image: "/images/catalogo/evotuc-paseo.png",
-    alt: "Triciclo eléctrico de paseo EVOTUC Paseo",
-    specs: [
-      "Motor 650W",
-      "Batería 20Ah",
-      "Autonomía 40–50 km",
-      "Asientos tipo paseo",
-    ],
   },
 ];
 
