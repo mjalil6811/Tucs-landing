@@ -7,7 +7,6 @@
 export const navLinks = [
   { label: "Casos de uso", href: "#casos-de-uso" },
   { label: "El vehículo", href: "#el-vehiculo" },
-  { label: "Ahorro", href: "#ahorro" },
   { label: "Para ciudades", href: "#para-ciudades" },
   { label: "Contacto", href: "#contacto" },
 ] as const;
@@ -114,28 +113,6 @@ export const vehicleFeatures = [
   "Componentes IP67",
 ];
 
-export type JoinPlan = {
-  title: string;
-  copy: string;
-  highlight?: boolean;
-};
-
-export const joinPlans: JoinPlan[] = [
-  {
-    title: "Compra directa",
-    copy: "Pagás y es tuyo. Entrega rápida, garantía de fábrica.",
-  },
-  {
-    title: "Leasing",
-    copy: "Alquiler con opción a compra. Trabajás, pagás la cuota y te volvés dueño.",
-    highlight: true,
-  },
-  {
-    title: "Flotas",
-    copy: "Volumen para operadores y empresas, con precio y soporte a medida.",
-  },
-];
-
 /** Stats del parque EVOTUC en operación (en alianza con GOU). */
 export const cityStats = [
   { value: 25, suffix: "", label: "Unidades en el parque EVOTUC" },
@@ -222,7 +199,7 @@ export const interestOptions: InterestOption[] = [
 export type InvestorStep = { title: string; copy: string };
 
 export type InvestorModel = {
-  id: "fleet" | "city";
+  id: "compra" | "fleet" | "city";
   badge: string;
   title: string;
   claim: string;
@@ -234,7 +211,7 @@ export type InvestorModel = {
 };
 
 /**
- * Bloque "Invertí en la red" dentro de "Cómo sumarte" (#como-sumarte).
+ * Sección "Invertí en movilidad eléctrica" (#invertir).
  * Contenido comercial / generación de leads: sin cifras, sin rentabilidades,
  * sin nombres de fabricantes. El detalle se da en una reunión, no acá.
  */
@@ -242,7 +219,7 @@ export const investorSection = {
   eyebrow: "INVERTÍ EN MOVILIDAD ELÉCTRICA",
   title: "Sé parte de la red de flotas eléctricas que ya está en las calles",
   subtitle:
-    "Dos formas de invertir en movilidad urbana sustentable, con una operación real y un equipo que la gestiona todos los días. Elegí la que mejor se adapta a vos.",
+    "Tres formas de sumarte a la movilidad eléctrica: comprá tu unidad, invertí en una flota o llevá la red a tu ciudad. Elegí la que mejor se adapta a vos.",
   whyNow: [
     "Movilidad urbana 100% eléctrica, con menores costos operativos.",
     "Alta demanda en ciudades medianas.",
@@ -270,13 +247,42 @@ export const investorSection = {
     ctaPrimary: "Hablemos",
     ctaWhatsapp: "Escribinos por WhatsApp",
     whatsappMessage:
-      "Hola, quiero información sobre los modelos para inversores (Fleet / City Partner).",
+      "Hola, quiero información sobre las formas de sumarme (Compra directa, Fleet Partner o City Partner).",
   },
   legal:
     "La información de esta sección es de carácter general e informativo. No constituye una oferta pública de valores ni una promesa de rentabilidad. Las condiciones de cada modelo se presentan de forma personalizada y están sujetas a evaluación y a la firma de los acuerdos correspondientes.",
 } as const;
 
 export const investorModels: InvestorModel[] = [
+  {
+    id: "compra",
+    badge: "Para compradores",
+    title: "Compra directa",
+    claim: "Comprás tu unidad y es tuya desde el día uno.",
+    copy: "Comprás una o más unidades y las sumás a tu propia operación o a la red de GOU. Vos decidís cómo generar ingresos con tu vehículo, con el respaldo de la marca y la posventa.",
+    benefits: [
+      "Sos dueño de la unidad desde el primer día",
+      "Podés sumarte a la red de GOU o operar por tu cuenta",
+      "Posventa y repuestos con soporte local",
+    ],
+    idealFor:
+      "Ideal para quienes quieren ser dueños de su vehículo eléctrico sin depender de un tercero.",
+    ctaLabel: "Quiero comprar mi unidad",
+    steps: [
+      {
+        title: "Elegís tu unidad",
+        copy: "Te asesoramos según el uso que le vas a dar.",
+      },
+      {
+        title: "Cerrás la compra",
+        copy: "Coordinamos entrega, documentación y patentamiento.",
+      },
+      {
+        title: "Empezás a operar",
+        copy: "La unidad es tuya: la usás por tu cuenta o la sumás a la red de GOU.",
+      },
+    ],
+  },
   {
     id: "fleet",
     badge: "Para inversores",

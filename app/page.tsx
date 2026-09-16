@@ -4,8 +4,7 @@ import Hero from "@/components/sections/Hero";
 import AllianceBar from "@/components/sections/AllianceBar";
 import UseCases from "@/components/sections/UseCases";
 import Vehicle from "@/components/sections/Vehicle";
-import Savings from "@/components/sections/Savings";
-import HowToJoin from "@/components/sections/HowToJoin";
+import InvestorModels from "@/components/sections/InvestorModels";
 import Cities from "@/components/sections/Cities";
 import SocialProof from "@/components/sections/SocialProof";
 import FAQ from "@/components/sections/FAQ";
@@ -54,8 +53,7 @@ export default function Home() {
         <UseCases />
         <Vehicle />
         <SectionDivider />
-        <Savings />
-        <HowToJoin />
+        <InvestorModels />
         <Cities />
         <SocialProof />
         <FAQ />
