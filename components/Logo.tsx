@@ -1,7 +1,7 @@
 import { brand } from "@/lib/brand";
 
 /**
- * Wordmark de ZUNA + pequeño "pulso" (sello de marca).
+ * Wordmark de EVOTUC + pequeño "pulso" (sello de marca).
  * El nombre se toma de lib/brand.ts para swap inmediato.
  */
 export default function Logo({

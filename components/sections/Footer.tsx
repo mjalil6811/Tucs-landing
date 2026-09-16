@@ -104,23 +104,11 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col items-center justify-between gap-3 py-6 text-sm text-paper/50 sm:flex-row">
+        <div className="py-6 text-center text-sm text-paper/50">
           <p>
             © {year} {brand.legalName} — {brand.name} es marca en trámite de
             registro. Todos los derechos reservados.
           </p>
-          <ul className="flex gap-5">
-            <li>
-              <a href="#" className="hover:text-paper/80">
-                Aviso legal
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-paper/80">
-                Privacidad
-              </a>
-            </li>
-          </ul>
         </div>
       </div>
     </footer>

@@ -13,7 +13,7 @@ Construida con **Next.js 14 (App Router) + TypeScript + Tailwind CSS + Framer Mo
 - **Framer Motion** (reveals, contadores, pulso animado; respeta `prefers-reduced-motion`)
 - Fuentes **self-hosted** vía `next/font`: Bricolage Grotesque (display), Inter (texto), Space Mono (datos/eyebrows)
 - SEO técnico: metadata, Open Graph, favicon, `sitemap.xml`, `robots.txt`, JSON-LD
-- Analytics: **GA4 + Meta Pixel** con eventos en cada CTA
+- Analytics: **GA4 + Meta Pixel** con eventos en cada CTA (ver `lib/analytics.ts`)
 
 ## Cómo correr
 
@@ -21,8 +21,8 @@ Construida con **Next.js 14 (App Router) + TypeScript + Tailwind CSS + Framer Mo
 npm install
 npm run dev        # http://localhost:3000
 npm run build      # build de producción
-npm start          # servir build
-npm run lint       # lint
+npm start           # servir build
+npm run lint         # lint
 ```
 
 ## Personalización rápida (swap de marca)
@@ -31,7 +31,7 @@ Todo el branding está centralizado:
 
 - **`lib/brand.ts`** → nombre, contacto, WhatsApp, redes, dominio, integraciones (Formspree/GA4/Pixel) y **paleta de color**.
 - **`app/globals.css`** (`:root`) → mismas variables de color para Tailwind.
-- **`lib/content.ts`** → todo el copy y datos (casos de uso, specs, FAQ, stats, testimonios).
+- **`lib/content.ts`** → todo el copy y datos (casos de uso, specs del vehículo, modelos de inversión, FAQ, stats, testimonios). Es la única fuente de contenido: no hardcodear textos en los componentes.
 
 Para cambiar el **nombre de la marca** en todo el sitio: editá `brand.name` en `lib/brand.ts`.
 
@@ -52,29 +52,27 @@ integrations: {
 
 ## Elemento signature
 
-**El pulso eléctrico / el silencio**: una onda en lima (`components/ui/PulseLine.tsx`) que recorre el hero, los divisores de sección y la calculadora. Representa que el triciclo eléctrico va en silencio.
+**El pulso eléctrico / el silencio**: una onda en lima (`components/ui/PulseLine.tsx`) que recorre el hero y los divisores de sección. Representa que el triciclo eléctrico va en silencio.
 
 ## Estructura
 
 ```
-app/            layout, page, globals.css, sitemap, robots
-components/      Navbar, Logo, Analytics, WhatsAppButton
-  sections/      Hero, AllianceBar, UseCases, Vehicle, Savings, HowToJoin,
-                 Cities, SocialProof, FAQ, ContactCTA, Footer
-  ui/            PulseLine, Reveal, Counter, SectionDivider, Icons, TukTuk
-lib/            brand.ts (tokens), content.ts (copy), analytics.ts
-public/         favicon.svg, og.svg, ficha-tecnica.pdf
-scripts/        gen-pdf.mjs (regenera la ficha técnica placeholder)
+app/             layout, page, globals.css, sitemap, robots
+components/       Navbar, Logo, Analytics, WhatsAppButton
+  sections/       Hero, AllianceBar, UseCases, InvestorModels, Vehicle,
+                  Cities, SocialProof, FAQ, ContactCTA, Footer
+  ui/             PulseLine, Reveal, Counter, SectionDivider, Icons
+lib/             brand.ts (tokens), content.ts (copy), analytics.ts
+public/          favicon.svg, og.svg, ficha-tecnica.pdf, images/
 ```
 
 ## Notas de contenido
 
-- Specs reales del modelo **HB1500DZK-21**. **No se muestran precios** ("Cotizá").
+- Specs reales del modelo **SANDI SD7500-KKDZK-1** ("EVOTUC City 7500"). **No se muestran precios** ("Cotizá").
 - EVOTUC es la **importadora**; es **aliado de GOU**. Las métricas de ciudades corresponden a la operación con GOU.
-- Reemplazá la ilustración del triciclo (`components/ui/TukTuk.tsx`) y `public/og.svg` / `ficha-tecnica.pdf` por assets reales (preferentemente `.webp` para fotos).
+- La sección de inversores (`components/sections/InvestorModels.tsx`, ancla `#invertir`) sigue reglas de contenido estrictas: sin cifras, sin rentabilidades ni nombres de fabricantes. El detalle de cada modelo se da en una reunión, no en la web.
+- `public/images/evotuc-city7500-*.{jpg,png}` son fotos de catálogo del fabricante, marcadas como ilustrativas en el sitio hasta contar con fotos propias de unidades EVOTUC.
 
 ## Deploy en Vercel
 
-1. Push del repo a GitHub.
-2. Importá el proyecto en Vercel (detecta Next.js automáticamente).
-3. Configurá las constantes de `lib/brand.ts` (o moverlas a variables de entorno si preferís).
+El repo despliega automáticamente a producción en cada push a `main` vía `.github/workflows/deploy-vercel.yml` (usa los secrets `VERCEL_TOKEN`, `VERCEL_ORG_ID` y `VERCEL_PROJECT_ID` del repositorio). También se puede importar el proyecto directamente en Vercel (detecta Next.js automáticamente).

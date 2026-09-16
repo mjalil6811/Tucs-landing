@@ -3,9 +3,9 @@
 import { useReducedMotion } from "framer-motion";
 
 /**
- * ELEMENTO SIGNATURE de ZUNA: "el pulso eléctrico / el silencio".
+ * ELEMENTO SIGNATURE de EVOTUC: "el pulso eléctrico / el silencio".
  * El tuk-tuk eléctrico ya no hace "tuk-tuk": va en silencio. Esta onda de pulso
- * en lima recorre la página (hero, divisores y calculadora).
+ * en lima recorre la página (hero y divisores de sección).
  *
  * Respeta prefers-reduced-motion: si está activo, muestra la línea estática.
  */
