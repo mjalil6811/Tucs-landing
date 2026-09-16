@@ -3,6 +3,7 @@
 import { joinPlans } from "@/lib/content";
 import Reveal from "@/components/ui/Reveal";
 import { trackEvent } from "@/lib/analytics";
+import InvestorModels from "./InvestorModels";
 
 export default function HowToJoin() {
   return (
@@ -59,6 +60,8 @@ export default function HowToJoin() {
             </Reveal>
           ))}
         </div>
+
+        <InvestorModels />
       </div>
     </section>
   );

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useEffect, useState, type FormEvent } from "react";
 import { brand, whatsappLink } from "@/lib/brand";
 import { interestOptions } from "@/lib/content";
 import { trackEvent } from "@/lib/analytics";
@@ -11,6 +11,20 @@ type Status = "idle" | "sending" | "ok" | "error";
 export default function ContactCTA() {
   const [status, setStatus] = useState<Status>("idle");
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [interes, setInteres] = useState<string>(interestOptions[0].value);
+
+  // Preselección desde CTA externos, p.ej. ?interes=fleet#contacto.
+  useEffect(() => {
+    try {
+      const params = new URLSearchParams(window.location.search);
+      const q = params.get("interes");
+      if (q && interestOptions.some((opt) => opt.value === q)) {
+        setInteres(q);
+      }
+    } catch {
+      // noop: si no hay window/URLSearchParams (SSR), se mantiene el default.
+    }
+  }, []);
 
   function validate(data: Record<string, string>) {
     const e: Record<string, string> = {};
@@ -39,11 +53,16 @@ export default function ContactCTA() {
       interes: data.interes,
       ciudad: data.ciudad,
     });
+    trackEvent("form_submit", { interes: data.interes });
+
+    const interesLabel =
+      interestOptions.find((opt) => opt.value === data.interes)?.label ??
+      data.interes;
 
     // Mensaje prearmado para WhatsApp.
     const msg =
       `Hola ${brand.name}, soy ${data.nombre} de ${data.ciudad}. ` +
-      `Me interesa: ${data.interes}. ` +
+      `Me interesa: ${interesLabel}. ` +
       (data.mensaje ? `Mensaje: ${data.mensaje}. ` : "") +
       `Mi WhatsApp: ${data.whatsapp}.`;
 
@@ -158,12 +177,18 @@ export default function ContactCTA() {
 
                 <div>
                   <label htmlFor="interes" className="font-mono text-xs uppercase tracking-wider text-muted">
-                    Interés
+                    Me interesa
                   </label>
-                  <select id="interes" name="interes" className={fieldClass} defaultValue={interestOptions[0]}>
+                  <select
+                    id="interes"
+                    name="interes"
+                    className={fieldClass}
+                    value={interes}
+                    onChange={(e) => setInteres(e.target.value)}
+                  >
                     {interestOptions.map((opt) => (
-                      <option key={opt} value={opt}>
-                        {opt}
+                      <option key={opt.value} value={opt.value}>
+                        {opt.label}
                       </option>
                     ))}
                   </select>

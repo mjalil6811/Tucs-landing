@@ -293,10 +293,138 @@ export const faqs: FAQ[] = [
   },
 ];
 
-export const interestOptions = [
-  "Comprar",
-  "Leasing",
-  "Flota",
-  "Delivery",
-  "Operar una ciudad",
-] as const;
+export type InterestOption = { value: string; label: string };
+
+/**
+ * Opciones del select "Interés" del formulario de contacto (#contacto).
+ * El `value` es el código usado en analytics y en el query param de
+ * preselección (?interes=<value>#contacto).
+ */
+export const interestOptions: InterestOption[] = [
+  { value: "vehiculos", label: "Comprar vehículos" },
+  { value: "leasing", label: "Leasing" },
+  { value: "flota", label: "Flota" },
+  { value: "delivery", label: "Delivery" },
+  { value: "operar_ciudad", label: "Operar una ciudad" },
+  { value: "fleet", label: "Fleet Partner" },
+  { value: "city", label: "City Partner" },
+  { value: "indefinido", label: "Todavía no lo sé" },
+];
+
+export type InvestorStep = { title: string; copy: string };
+
+export type InvestorModel = {
+  id: "fleet" | "city";
+  badge: string;
+  title: string;
+  claim: string;
+  copy: string;
+  benefits: string[];
+  idealFor: string;
+  ctaLabel: string;
+  steps: InvestorStep[];
+};
+
+/**
+ * Bloque "Invertí en la red" dentro de "Cómo sumarte" (#como-sumarte).
+ * Contenido comercial / generación de leads: sin cifras, sin rentabilidades,
+ * sin nombres de fabricantes. El detalle se da en una reunión, no acá.
+ */
+export const investorSection = {
+  eyebrow: "INVERTÍ EN MOVILIDAD ELÉCTRICA",
+  title: "Sé parte de la red de flotas eléctricas que ya está en las calles",
+  subtitle:
+    "Dos formas de invertir en movilidad urbana sustentable, con una operación real y un equipo que la gestiona todos los días. Elegí la que mejor se adapta a vos.",
+  whyNow: [
+    "Movilidad urbana 100% eléctrica, con menores costos operativos.",
+    "Alta demanda en ciudades medianas.",
+    "Un modelo replicable, ciudad por ciudad.",
+  ],
+  comparison: {
+    rows: [
+      { label: "Tu rol", fleet: "Inversor", city: "Operador local" },
+      { label: "Involucramiento", fleet: "Bajo", city: "Alto" },
+      {
+        label: "Qué aportás",
+        fleet: "Capital para la flota",
+        city: "Capital, gestión y conocimiento local",
+      },
+      {
+        label: "Qué aportamos",
+        fleet: "Operación integral",
+        city: "Vehículos, app, marca y soporte",
+      },
+    ],
+  },
+  closing: {
+    title: "¿Querés conocer los detalles?",
+    copy: "Agendamos una reunión y te presentamos el modelo que mejor se ajusta a tu perfil.",
+    ctaPrimary: "Hablemos",
+    ctaWhatsapp: "Escribinos por WhatsApp",
+    whatsappMessage:
+      "Hola, quiero información sobre los modelos para inversores (Fleet / City Partner).",
+  },
+  legal:
+    "La información de esta sección es de carácter general e informativo. No constituye una oferta pública de valores ni una promesa de rentabilidad. Las condiciones de cada modelo se presentan de forma personalizada y están sujetas a evaluación y a la firma de los acuerdos correspondientes.",
+} as const;
+
+export const investorModels: InvestorModel[] = [
+  {
+    id: "fleet",
+    badge: "Para inversores",
+    title: "Fleet Partner",
+    claim: "Tu flota, nuestra operación.",
+    copy: "Invertís en una flota de vehículos eléctricos y GOU se encarga de todo lo demás: conductores, mantenimiento, tecnología y gestión diaria. Vos participás de los resultados de la operación, sin involucrarte en el día a día.",
+    benefits: [
+      "Activo real y tangible",
+      "Operación 100 % a cargo del equipo",
+      "Reportes periódicos de desempeño",
+    ],
+    idealFor:
+      "Ideal para quienes buscan diversificar en un activo concreto sin operar el negocio.",
+    ctaLabel: "Quiero ser Fleet Partner",
+    steps: [
+      {
+        title: "Conversamos",
+        copy: "Entendemos tu perfil y armamos una propuesta a medida.",
+      },
+      {
+        title: "Ponemos la flota en la calle",
+        copy: "Incorporamos las unidades a la operación de GOU.",
+      },
+      {
+        title: "Seguís los resultados",
+        copy: "Recibís información periódica sobre el desempeño de tu flota.",
+      },
+    ],
+  },
+  {
+    id: "city",
+    badge: "Para emprendedores",
+    title: "City Partner",
+    claim: "Llevá la red a tu ciudad.",
+    copy: "Liderás la movilidad eléctrica en tu ciudad con un modelo probado. Nosotros aportamos los vehículos, la app, la marca y el know-how; vos aportás tu conocimiento local y construís un negocio propio.",
+    benefits: [
+      "Modelo de negocio validado",
+      "Tecnología y marca desde el día uno",
+      "Acompañamiento en el lanzamiento y la operación",
+    ],
+    idealFor:
+      "Ideal para emprendedores con arraigo local que quieren desarrollar un negocio en su ciudad.",
+    ctaLabel: "Quiero ser City Partner",
+    steps: [
+      {
+        title: "Analizamos tu ciudad",
+        copy: "Evaluamos demanda, regulación y potencial.",
+      },
+      {
+        title: "Preparamos el lanzamiento",
+        copy: "Flota, conductores, app y activación comercial.",
+      },
+      {
+        title: "Operás con respaldo",
+        copy: "Gestionás la red local con nuestro soporte continuo.",
+      },
+    ],
+  },
+];
