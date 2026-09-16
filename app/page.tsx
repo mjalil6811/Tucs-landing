@@ -3,8 +3,8 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/sections/Hero";
 import AllianceBar from "@/components/sections/AllianceBar";
 import UseCases from "@/components/sections/UseCases";
-import Vehicle from "@/components/sections/Vehicle";
 import InvestorModels from "@/components/sections/InvestorModels";
+import Vehicle from "@/components/sections/Vehicle";
 import Cities from "@/components/sections/Cities";
 import SocialProof from "@/components/sections/SocialProof";
 import FAQ from "@/components/sections/FAQ";
@@ -51,9 +51,9 @@ export default function Home() {
         <Hero />
         <AllianceBar />
         <UseCases />
-        <Vehicle />
-        <SectionDivider />
         <InvestorModels />
+        <SectionDivider />
+        <Vehicle />
         <Cities />
         <SocialProof />
         <FAQ />
